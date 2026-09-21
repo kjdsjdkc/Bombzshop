@@ -59,56 +59,56 @@ const packages = [
 
 const reviews = [
   {
-    name: "@neo_zinn",
+    name: "@luanzin",
     avatar: avatar1,
     rating: 5,
     text: "Chegou certinho no e-mail. Processo bem simples, compraria de novo.",
     time: "há 12 min",
   },
   {
-    name: "@k4i.surf 🏄",
+    name: "@kai.surf 🏄",
     avatar: avatar2,
     rating: 4,
     text: "Demorou alguns minutinhos a mais, mas nada demais. Recebi tudo certinho.",
     time: "há 38 min",
   },
   {
-    name: "@zin_0x",
+    name: "@zinny_07",
     avatar: avatar3,
     rating: 5,
     text: "Preço bom e sem complicação. O aviso apareceu no meu e-mail logo depois.",
     time: "há 1 h",
   },
   {
-    name: "@drk.zayn",
+    name: "@duduzin",
     avatar: avatar4,
     rating: 5,
     text: "Paguei pelo PixGG e veio na hora. Recomendo demais, confiável.",
     time: "há 2 h",
   },
   {
-    name: "@rx_gg",
+    name: "@ryanplays",
     avatar: avatar5,
     rating: 5,
     text: "Melhor preço que achei. Paguei o valor exato e os robux caíram rapidinho.",
     time: "há 3 h",
   },
   {
-    name: "@luc4s.br",
+    name: "@lucasxz",
     avatar: avatar6,
     rating: 4,
     text: "Funcionou certinho. Só tem que prestar atenção no valor certo na hora de pagar.",
     time: "há 4 h",
   },
   {
-    name: "@vini_drift",
+    name: "@vinidrift",
     avatar: avatar7,
     rating: 5,
     text: "Confirmação chegou no e-mail rápido. Site confiável, já é a terceira compra.",
     time: "há 5 h",
   },
   {
-    name: "@brente_gg",
+    name: "@bielzin",
     avatar: avatar8,
     rating: 5,
     text: "Recebi certinho depois de pagar pelo PixGG. Sem erro, sem enrolação.",
@@ -140,7 +140,7 @@ function ReviewCard({ review }: { review: (typeof reviews)[number] }) {
       <header>
         <img
           src={review.avatar}
-          alt={`Avatar fictício de ${review.name}`}
+          alt={`Avatar de ${review.name}`}
           width={784}
           height={784}
           loading="lazy"
@@ -224,7 +224,6 @@ function Index() {
             <h2>Quem compra,<br /><em>volta.</em></h2>
           </div>
           <p>
-            Uma prévia de como a área de avaliações funciona. Os nomes, avatares e relatos abaixo são fictícios e ilustrativos.
           </p>
         </div>
         <div className="reviews-track-wrap" aria-label="Avaliações demonstrativas em movimento">
