@@ -10,13 +10,18 @@ import {
   Sparkles,
   Star,
   Zap,
+  AlertTriangle,
 } from "lucide-react";
 import { useState } from "react";
 
-import avatarKai from "../assets/avatar-kai.jpg";
-import avatarLuna from "../assets/avatar-luna.jpg";
-import avatarNeo from "../assets/avatar-neo.jpg";
-import avatarZin from "../assets/avatar-zin.jpg";
+import avatar1 from "../assets/avatar-1.jpg";
+import avatar2 from "../assets/avatar-2.jpg";
+import avatar3 from "../assets/avatar-3.jpg";
+import avatar4 from "../assets/avatar-4.jpg";
+import avatar5 from "../assets/avatar-5.jpg";
+import avatar6 from "../assets/avatar-6.jpg";
+import avatar7 from "../assets/avatar-7.jpg";
+import avatar8 from "../assets/avatar-8.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,7 +30,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Escolha seu pacote de Robux na Bombz Shop e receba a confirmação da compra diretamente por e-mail.",
+          "Escolha seu pacote de Robux na Bombz Shop e receba a confirmação da compra diretamente por e-mail via PixGG.",
       },
       { property: "og:title", content: "Bombz Shop | Robux com entrega por e-mail" },
       {
@@ -55,33 +60,63 @@ const packages = [
 const reviews = [
   {
     name: "@neo_zinn",
-    avatar: avatarNeo,
+    avatar: avatar1,
     rating: 5,
     text: "Chegou certinho no e-mail. Processo bem simples, compraria de novo.",
     time: "há 12 min",
   },
   {
-    name: "@luuh.xp",
-    avatar: avatarLuna,
-    rating: 5,
-    text: "Fiquei com receio no começo, mas deu tudo certo e a confirmação chegou rápido.",
+    name: "@k4i.surf 🏄",
+    avatar: avatar2,
+    rating: 4,
+    text: "Demorou alguns minutinhos a mais, mas nada demais. Recebi tudo certinho.",
     time: "há 38 min",
   },
   {
-    name: "@k4i.surf 🏄",
-    avatar: avatarKai,
-    rating: 4,
-    text: "Demorou alguns minutinhos a mais, mas nada demais. Recebi tudo certinho.",
+    name: "@zin_0x",
+    avatar: avatar3,
+    rating: 5,
+    text: "Preço bom e sem complicação. O aviso apareceu no meu e-mail logo depois.",
     time: "há 1 h",
   },
   {
-    name: "@zin_0x",
-    avatar: avatarZin,
+    name: "@drk.zayn",
+    avatar: avatar4,
     rating: 5,
-    text: "Preço bom e sem complicação. O aviso apareceu no meu e-mail logo depois.",
+    text: "Paguei pelo PixGG e veio na hora. Recomendo demais, confiável.",
     time: "há 2 h",
   },
+  {
+    name: "@rx_gg",
+    avatar: avatar5,
+    rating: 5,
+    text: "Melhor preço que achei. Paguei o valor exato e os robux caíram rapidinho.",
+    time: "há 3 h",
+  },
+  {
+    name: "@luc4s.br",
+    avatar: avatar6,
+    rating: 4,
+    text: "Funcionou certinho. Só tem que prestar atenção no valor certo na hora de pagar.",
+    time: "há 4 h",
+  },
+  {
+    name: "@vini_drift",
+    avatar: avatar7,
+    rating: 5,
+    text: "Confirmação chegou no e-mail rápido. Site confiável, já é a terceira compra.",
+    time: "há 5 h",
+  },
+  {
+    name: "@brente_gg",
+    avatar: avatar8,
+    rating: 5,
+    text: "Recebi certinho depois de pagar pelo PixGG. Sem erro, sem enrolação.",
+    time: "há 6 h",
+  },
 ];
+
+const PIXGG_URL = "https://pixgg.com/Bombzshop";
 
 function BombMark({ className = "" }: { className?: string }) {
   return (
@@ -106,8 +141,8 @@ function ReviewCard({ review }: { review: (typeof reviews)[number] }) {
         <img
           src={review.avatar}
           alt={`Avatar fictício de ${review.name}`}
-          width={816}
-          height={816}
+          width={784}
+          height={784}
           loading="lazy"
         />
         <div>
@@ -155,7 +190,7 @@ function Index() {
             <em>compra</em> começa aqui.
           </h1>
           <p>
-            Escolha seu pacote, pague com LivePix e acompanhe a confirmação diretamente pelo seu e-mail.
+            Escolha seu pacote, pague com PixGG e acompanhe a confirmação diretamente pelo seu e-mail.
           </p>
           <div className="hero-actions">
             <a className="button-primary" href="#precos">
@@ -170,7 +205,7 @@ function Index() {
           <div className="orbit orbit-two" />
           <div className="hero-bomb"><BombMark /></div>
           <span className="float-tag tag-one">+ ROBUX</span>
-          <span className="float-tag tag-two">LIVEPIX</span>
+          <span className="float-tag tag-two">PIXGG</span>
           <span className="float-tag tag-three">E-MAIL ✓</span>
         </div>
 
@@ -221,7 +256,7 @@ function Index() {
             <span className="step-icon"><Mail /></span>
             <span className="step-number">02</span>
             <h3>Informe seu e-mail</h3>
-            <p>No LivePix, preencha o campo <strong>“nome” com o seu e-mail</strong>. É por ele que você receberá a confirmação.</p>
+            <p>No PixGG, preencha o campo <strong>“nome” com o seu e-mail</strong>. É por ele que você receberá a confirmação.</p>
           </article>
           <article>
             <span className="step-icon"><Zap /></span>
@@ -274,13 +309,19 @@ function Index() {
             <div><span>Você escolheu</span><strong>{chosen.robux} ROBUX</strong></div>
             <div><span>Total</span><strong>{chosen.price}</strong></div>
           </div>
-          <button type="button" className="pay-button" disabled>
-            Link de pagamento em breve <Clock3 size={19} />
-          </button>
+          <a className="pay-button" href={PIXGG_URL} target="_blank" rel="noopener noreferrer">
+            Pagar com PixGG <ArrowRight size={19} />
+          </a>
           <p className="payment-note">
             <ShieldCheck size={18} />
             Ao pagar, o sistema detecta o pagamento e envia um e-mail de confirmação. Caso ele não chegue, confira se o e-mail foi digitado corretamente no campo “nome”.
           </p>
+          <div className="payment-warning">
+            <AlertTriangle size={18} />
+            <p>
+              <strong>Atenção:</strong> pague sempre o valor exato do pacote escolhido. Se o pagamento for feito em valor incorreto, os Robux ficarão retidos até que o pagamento seja completado.
+            </p>
+          </div>
         </div>
       </section>
 
