@@ -140,7 +140,7 @@ function ReviewCard({ review }: { review: (typeof reviews)[number] }) {
       <header>
         <img
           src={review.avatar}
-          alt={`Avatar de ${review.name}`}
+          alt={`Avatar fictício de ${review.name}`}
           width={784}
           height={784}
           loading="lazy"
@@ -224,6 +224,7 @@ function Index() {
             <h2>Quem compra,<br /><em>volta.</em></h2>
           </div>
           <p>
+            Uma prévia de como a área de avaliações funciona. Os nomes, avatares e relatos abaixo são fictícios e ilustrativos.
           </p>
         </div>
         <div className="reviews-track-wrap" aria-label="Avaliações demonstrativas em movimento">
