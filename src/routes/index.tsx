@@ -127,7 +127,11 @@ function ReviewCard({ review }: { review: (typeof reviews)[number] }) {
 
 function Index() {
   const [selected, setSelected] = useState(0);
-  const chosen = packages[selected];
+  const chosen = packages[selected] ?? packages[0];
+
+  if (!chosen) {
+    return null;
+  }
 
   return (
     <main id="topo">
