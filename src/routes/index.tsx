@@ -224,7 +224,6 @@ function Index() {
             <h2>Quem compra,<br /><em>volta.</em></h2>
           </div>
           <p>
-            Uma prévia de como a área de avaliações funciona. Os nomes, avatares e relatos abaixo são fictícios e ilustrativos.
           </p>
         </div>
         <div className="reviews-track-wrap" aria-label="Avaliações demonstrativas em movimento">
