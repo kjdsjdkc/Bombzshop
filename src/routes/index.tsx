@@ -234,7 +234,6 @@ function Index() {
             ))}
           </div>
         </div>
-        <div className="demo-label"><Sparkles size={14} /> Conteúdo demonstrativo — nenhum perfil representa uma pessoa real</div>
       </section>
 
       <section className="delivery-section">
