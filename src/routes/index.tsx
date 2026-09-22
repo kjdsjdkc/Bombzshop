@@ -214,7 +214,7 @@ function Index() {
           <div><strong>10</strong><span>opções de pacote</span></div>
           <div><strong>100%</strong><span>confirmação por e-mail</span></div>
         </div>
-        <small className="store-note">* Média informada pela loja.</small>
+        <small className="store-note">* Compre com segurança</small>
       </section>
 
       <section className="reviews-section" id="avaliacoes">
